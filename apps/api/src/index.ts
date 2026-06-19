@@ -1,5 +1,4 @@
 import express from 'express';
-import cors from 'cors';
 import { initSchema, seedData } from './db.js';
 import { authRouter } from './routes/auth.js';
 import { projectsRouter } from './routes/projects.js';
@@ -14,14 +13,6 @@ const PORT = process.env.PORT ? Number(process.env.PORT) : 3001;
 // Parse JSON bodies
 app.use(express.json());
 
-// CORS – allow the Vite dev server and any configured origin to access the API with credentials
-app.use(
-  cors({
-    origin: true,
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  })
-);
 
 // Health check
 app.get('/api/health', (_req, res) => {
