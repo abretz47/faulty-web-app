@@ -8,10 +8,8 @@
     "jsx": "react-jsx",
     "outDir": "./dist",
     "noEmit": true,
+    "rootDir": "./src",
     "allowImportingTsExtensions": true,
-    "paths": {
-      "@team-tracker/shared": ["../../packages/shared/src/index.ts"]
-    }
   },
   "include": ["src/**/*"]
 }
